@@ -1,0 +1,30 @@
+- name: Playbook to setup apps to a freshly installed ubuntu like laptop.
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+      - name: Install ansible
+        apt:
+            name: ansible
+            state: present
+      - name: Install snapd
+        apt:
+            name: snapd
+            state: present
+      - name: Install git
+        apt:
+            name: git
+            state: present
+      - name: Install vagrant
+        apt:
+            name: vagrant
+            state: present
+      - name: Install virtualbox
+        apt:
+            name: virtualbox
+            state: present
+      - name: Install vagrant
+        apt:
+            name: vagrant
+            state: present
